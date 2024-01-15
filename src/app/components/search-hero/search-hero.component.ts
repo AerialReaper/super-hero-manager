@@ -18,7 +18,8 @@ export class SearchHeroComponent {
 
   public submit(): void {
     if(this.search){
-      this.heroService.getHeroesByName(this.search).then( (res: Hero[] ) => {
+      const params = { search: this.search };
+      this.heroService.getHeroesByName(params).then( (res: Hero[] ) => {
         this.sendInfoToMosaic(res);
       });
     }

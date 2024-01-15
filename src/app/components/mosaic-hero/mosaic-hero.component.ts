@@ -48,7 +48,8 @@ export class MosaicHeroComponent implements OnInit {
   }
 
   deleteHero(heroId: string): void {
-    this.heroService.deleteHero(heroId).then((res: GetHeroesResponse ) => {
+    const params = { id: heroId }
+    this.heroService.deleteHero(params).then((res: GetHeroesResponse ) => {
       this.refreshTable(res.data.heroes);
     });
   }

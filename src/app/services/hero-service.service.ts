@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GetHeroesResponse, Hero, HeroByIdParams } from '../models/hero.model';
+import { GetHeroesResponse, Hero, HeroQueryParams } from '../models/hero.model';
 import { API_URLS } from '../constants';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class HeroService {
     return await data.json() ?? [];
   }
 
-  async getHeroById(heroByIdParams: HeroByIdParams): Promise<Hero> {
+  async getHeroById(heroByIdParams: HeroQueryParams): Promise<Hero> {
     const data = await fetch(API_URLS.getHeroByIdUrl ,{
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -25,8 +25,8 @@ export class HeroService {
     return await data.json() ?? [];
   }
 
-  async getHeroesByName(search: string): Promise<Hero[]> {
-    const params = { search }
+  async getHeroesByName(heroByNameQuery: HeroQueryParams): Promise<Hero[]> {
+    const params = { search: heroByNameQuery }
     const data = await fetch(API_URLS.getHeroesByNameUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -35,14 +35,11 @@ export class HeroService {
     return await data.json() ?? [];
   }
 
-  async addNewHero(heroName: string): Promise<void> {
-    const params = {
-      heroName
-    }
+  async addNewHero(heroName: HeroQueryParams): Promise<void> {
     const data = await fetch(API_URLS.addNewHeroUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(params)
+      body: JSON.stringify(heroName)
     });
   }
 
@@ -55,8 +52,8 @@ export class HeroService {
     });
   }
 
-  async deleteHero(id: string): Promise<GetHeroesResponse> {
-    const params = { id }
+  async deleteHero(heroQueryParams: HeroQueryParams): Promise<GetHeroesResponse> {
+    const params = { id: heroQueryParams }
     const data = await fetch(API_URLS.deleteHeroUrl, {
       method: "DELETE", 
       headers: {'Content-Type': 'application/json'}, 

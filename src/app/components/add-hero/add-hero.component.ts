@@ -31,7 +31,8 @@ export class AddHeroComponent {
 
   addNewHero(){
     this.showSpinner = true;
-    this.heroService.addNewHero(this.targetHero.name).then( () => {
+    const params = { heroName: this.targetHero.name }
+    this.heroService.addNewHero(params).then( () => {
       this.showSpinner = false;
       this.router.navigate(['/see-all-heroes']);
     })

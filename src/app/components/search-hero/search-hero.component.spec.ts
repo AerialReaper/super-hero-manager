@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { SearchHeroComponent } from './search-hero.component';
 import { HeroService } from 'src/app/services/hero-service.service';
-import { Hero } from 'src/app/models/hero.model';
+import { Hero, HeroQueryParams } from 'src/app/models/hero.model';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -33,6 +33,7 @@ describe('SearchHeroComponent', () => {
       { id: '1', name: 'Hero1' },
       { id: '2', name: 'Hero2' }
     ];
+    const params: HeroQueryParams = { search: 'Hero' };
 
     const emitSpy = spyOn(component.heroResultEmiter, 'emit');
 
@@ -40,7 +41,7 @@ describe('SearchHeroComponent', () => {
     component.submit();
     tick();
 
-    expect(heroServiceSpy.getHeroesByName).toHaveBeenCalledWith('Hero');
+    expect(heroServiceSpy.getHeroesByName).toHaveBeenCalledWith(params);
     expect(emitSpy).toHaveBeenCalledWith(mockHeroes);
   }));
 

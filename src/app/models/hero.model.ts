@@ -11,6 +11,8 @@ export interface HeroList {
     heroes: Hero[];
 }
 
-export interface HeroByIdParams {
-    id : string | null;
+export interface HeroQueryParams {
+    id? : string | null;
+    search? : string;
+    heroName? : string;
 }
