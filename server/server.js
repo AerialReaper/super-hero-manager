@@ -34,8 +34,10 @@ server.post('/api/addNewHero', (req, res, next) => {
 });
 
 server.post('/api/modifyHero', (req, res, next) => {
-    const hero = heroesData.getHeroes.data.heroes[req.body.hero.id];
-    hero.name = req.body.hero.name.toUpperCase();
+    const hero = heroesData.getHeroes.data.heroes.find( hero => {
+        return hero.id === req.body.id
+    });
+    hero.name = req.body.name.toUpperCase();
     setTimeout(() =>{
         res.status(201).send(hero);
     }, "2000");

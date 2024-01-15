@@ -38,11 +38,12 @@ describe('HeroService', () => {
   });
 
   it('should modify a hero', async () => {
-    const myHero = { id: '1', name: 'Test Hero' };
+    const myHero = { id: '10', name: 'Test Hero' };
     let result;
     await service.modifyHero(myHero).then(() => {});
     await service.getAllHeroes().then((data: GetHeroesResponse) => {
       result = data.data.heroes.find((hero) => {
+        console.log(hero)
         return hero.name === myHero.name.toUpperCase();
       });
       expect(result?.name).toEqual(myHero.name.toUpperCase());

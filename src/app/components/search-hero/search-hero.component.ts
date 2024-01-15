@@ -17,12 +17,10 @@ export class SearchHeroComponent {
   public search: string = '';
 
   public submit(): void {
-    if(this.search){
       const params = { search: this.search };
       this.heroService.getHeroesByName(params).then( (res: Hero[] ) => {
         this.sendInfoToMosaic(res);
       });
-    }
   }
 
   private sendInfoToMosaic(result: Hero[]): void {

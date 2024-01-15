@@ -26,11 +26,10 @@ export class HeroService {
   }
 
   async getHeroesByName(heroByNameQuery: HeroQueryParams): Promise<Hero[]> {
-    const params = { search: heroByNameQuery }
     const data = await fetch(API_URLS.getHeroesByNameUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(params)
+      body: JSON.stringify(heroByNameQuery)
     });
     return await data.json() ?? [];
   }
@@ -44,20 +43,18 @@ export class HeroService {
   }
 
   async modifyHero(hero: Hero): Promise<void> {
-    const params = { hero }
     const data = await fetch(API_URLS.modifyHeroUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(params)
+      body: JSON.stringify(hero)
     });
   }
 
   async deleteHero(heroQueryParams: HeroQueryParams): Promise<GetHeroesResponse> {
-    const params = { id: heroQueryParams }
     const data = await fetch(API_URLS.deleteHeroUrl, {
       method: "DELETE", 
       headers: {'Content-Type': 'application/json'}, 
-      body: JSON.stringify(params)
+      body: JSON.stringify(heroQueryParams)
     });
     return await data.json() ?? [];
   }
