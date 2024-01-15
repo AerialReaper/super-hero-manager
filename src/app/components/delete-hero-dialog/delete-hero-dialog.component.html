@@ -1,1 +1,8 @@
-<p>delete-hero-dialog works!</p>
+<h1 mat-dialog-title>Eliminar héroe</h1>
+<div mat-dialog-content>
+  <p>{{data}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">No</button>
+  <button mat-button (click)="dialogRef.close(true)">Sí</button>
+</div>

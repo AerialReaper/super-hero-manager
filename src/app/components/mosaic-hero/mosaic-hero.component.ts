@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, ViewChild, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { GetHeroesResponse, Hero, HeroByIdParams } from 'src/app/models/hero.model';
+import { GetHeroesResponse, Hero } from 'src/app/models/hero.model';
 import { HeroService } from 'src/app/services/hero-service.service';
-import { UppercaseDirective } from '../../directives/uppercase.directive';
 import { MatDialog } from '@angular/material/dialog';
+import { DeleteHeroDialogComponent } from '../delete-hero-dialog/delete-hero-dialog.component';
 
 @Component({
   selector: 'app-mosaic-hero',
@@ -48,20 +48,20 @@ export class MosaicHeroComponent implements OnInit {
   }
 
   deleteHero(heroId: string): void {
-    this.openDialog(heroId);
+    this.heroService.deleteHero(heroId).then((res: GetHeroesResponse ) => {
+      this.refreshTable(res.data.heroes);
+    });
   }
 
   openDialog(heroId: string): void {
-    // const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-    //   width: '350px',
-    //   data: "¿Estás seguro de que quieres eliminar este héroe?"
-    // });
+    const dialogRef = this.dialog.open(DeleteHeroDialogComponent, {
+      width: '350px',
+      data: "Are you sure you want to eliminate the hero with id "+heroId+" ?"
+    });
   
-    // dialogRef.afterClosed().subscribe(result => {
-    //   if(result) {
-    //     this.heroService.deleteHero(heroId);
-    //   }
-    // });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result) this.deleteHero(heroId);
+    });
   }
 
   refreshTable( heroList: Hero[]): void {
