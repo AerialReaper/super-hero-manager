@@ -1,13 +1,13 @@
 <div class="container">
-    <form (ngSubmit)="submit()">
-        <mat-form-field>
-            <mat-label>Search</mat-label>
-            <input matInput
-            id="heroName"
-            name="heroName"
-            [(ngModel)]="search"
-            >
-        </mat-form-field>        
-    </form>
+    <div class="search-add-container">
+        <form (ngSubmit)="submit()" class="search-form">
+            <mat-form-field matInput class="search-form-input">
+                <mat-label class="search-form-label">Search hero</mat-label>
+                <input matInput class="search-form-input" id="heroName" name="heroName" [(ngModel)]="search" appUppercaseInput>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" [routerLink]="'/add-hero'" class="add-button">
+            <i>Add</i> new hero
+        </button>
+    </div>
 </div>
-

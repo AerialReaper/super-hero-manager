@@ -13,6 +13,8 @@ import { ModifyHeroComponent } from './components/modify-hero/modify-hero.compon
 import { AddHeroComponent } from './components/add-hero/add-hero.component';
 import { UppercaseDirective } from './directives/uppercase.directive';
 import { UppercaseInputDirective } from './directives/uppercaseInput.directive';
+import { DeleteHeroDialogComponent } from './components/delete-hero-dialog/delete-hero-dialog.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -24,14 +26,17 @@ import { UppercaseInputDirective } from './directives/uppercaseInput.directive';
     AddHeroComponent,
     ModifyHeroComponent,
     UppercaseDirective,
-    UppercaseInputDirective
+    UppercaseInputDirective,
+    DeleteHeroDialogComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

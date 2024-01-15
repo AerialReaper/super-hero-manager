@@ -1,0 +1,29 @@
+div {
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+  }
+  
+  /* Estilos para el contenedor de los botones */
+div[mat-dialog-actions] {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para el botón de 'Sí' */
+  div[mat-dialog-actions] button:nth-child(2) {
+    border: 2px solid red; /* Borde rojo */
+  }
+  
+  div[mat-dialog-actions] button:nth-child(2):hover {
+    background-color: red; /* Color rojo al pasar el ratón */
+    color: white;
+  }
+  
+  /* Estilos para el botón de 'No' */
+  div[mat-dialog-actions] button:nth-child(1) {
+    border: 2px solid purple; /* Borde morado */
+  }
+  
+  div[mat-dialog-actions] button:nth-child(1):hover {
+    background-color: purple; /* Color morado al pasar el ratón */
+    color: white;
+  }

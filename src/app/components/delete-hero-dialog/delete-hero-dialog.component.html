@@ -1,8 +1,10 @@
-<h1 mat-dialog-title>Eliminar héroe</h1>
-<div mat-dialog-content>
-  <p>{{data}}</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="dialogRef.close()">No</button>
-  <button mat-button (click)="dialogRef.close(true)">Sí</button>
+<div>
+  <h1 mat-dialog-title>Delete Hero</h1>
+  <div class="mat-dialog-actions">
+    <p mat-dialog-content>{{data}}</p>
+  </div>
+  <div>
+    <button mat-button (click)="dialogRef.close()">No</button>
+    <button mat-button (click)="dialogRef.close(true)">Yes</button>
+  </div>
 </div>

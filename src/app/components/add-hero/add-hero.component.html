@@ -1,17 +1,20 @@
-<form class="add-hero-form">
-    <mat-form-field class="example-full-width">
+<div>
+  <form class="add-hero-form">
+    <mat-form-field class="full-width">
       <mat-label>Hero Name</mat-label>
       <input type="text" matInput [formControl]="addHeroFormControl" [(ngModel)]="targetHero.name" [errorStateMatcher]="matcher"
-             placeholder="Super-Man" appUppercaseInput>
-      @if (addHeroFormControl.hasError('text') && !addHeroFormControl.hasError('required')) {
+             placeholder="Super-Man" appUppercaseInput [disabled]="showSpinner">
+      @if (addHeroFormControl.hasError('pattern') && !addHeroFormControl.hasError('required')) {
         <mat-error>Please enter a valid hero name</mat-error>
       }
       @if (addHeroFormControl.hasError('required')) {
         <mat-error>Hero name is <strong>required</strong></mat-error>
       }
     </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addNewHero()" [disabled]="showSpinner || !targetHero.name || addHeroFormControl.hasError('pattern')"> Add </button>
   </form>
   
-  <button mat-raised-button color="primary" (click)="addNewHero()" [disabled]="showSpinner || !targetHero.name"> Add </button>
-  
-  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+</div>
+
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<div *ngIf="showSpinner" class="disable-background"></div>

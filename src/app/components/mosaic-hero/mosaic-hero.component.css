@@ -1,0 +1,82 @@
+.mat-elevation-z8 {
+    width: 88%;
+    max-width: 100%;
+    margin: 2em auto;
+    overflow: auto;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.mat-cell,
+.mat-header-cell {
+    padding: 16px;
+    text-align: center;
+    width: 150px;
+}
+
+.mat-header-cell {
+    color: white;
+    background-color: #e8eaf6;
+    background-color: #673ab7;
+}
+
+.mat-paginator {
+    margin-top: 20px;
+}
+
+.mat-column-id {
+    max-width: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+button {
+    margin-right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+button.modify {
+    background-color: #ff9800;
+}
+
+button:hover {
+    background-color: white;
+    color: #3f51b5;
+    border: 2px solid #673ab7;
+}
+
+button.edit-button {
+    background-color: #673ab7;
+    border-radius: 12px;
+}
+
+button.edit-button:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+button.delete-button {
+    background-color: #673ab7;
+    border-radius: 12px;
+}
+
+button.delete-button:hover {
+    background-color: #B22222;
+    color: white;
+}
+
+button.edit-button,
+button.delete-button {
+    float: right;
+}
