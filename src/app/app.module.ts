@@ -12,6 +12,8 @@ import { ViewAllHeroesComponent } from './components/view-all-heroes/view-all-he
 import { ModifyHeroComponent } from './components/modify-hero/modify-hero.component';
 import { AddHeroComponent } from './components/add-hero/add-hero.component';
 import { UppercaseDirective } from './directives/uppercase.directive';
+import { UppercaseInputDirective } from './directives/uppercaseInput.directive';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { UppercaseDirective } from './directives/uppercase.directive';
     ViewAllHeroesComponent,
     AddHeroComponent,
     ModifyHeroComponent,
-    UppercaseDirective
+    UppercaseDirective,
+    UppercaseInputDirective
   ],
   imports: [
     BrowserModule,
