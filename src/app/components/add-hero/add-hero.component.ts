@@ -11,7 +11,7 @@ import { HeroService } from 'src/app/services/hero-service.service';
   styleUrl: './add-hero.component.css'
 })
 export class AddHeroComponent {
-  addHeroFormControl = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\s]+-?[a-zA-Z\s]+$')]);
+  addHeroFormControl = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+[-\s]?[a-zA-Z]+$')]);
   matcher = new ErrorStateMatcher();
   targetHero: Hero = {
     name : '',

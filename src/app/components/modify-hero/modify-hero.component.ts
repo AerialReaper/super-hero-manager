@@ -12,7 +12,7 @@ import { HeroService } from 'src/app/services/hero-service.service';
 })
 export class ModifyHeroComponent implements OnInit, ErrorStateMatcher {
 
-  modifyHeroFormControl = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\s]+-?[a-zA-Z\s]+$')]);
+  modifyHeroFormControl = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+[-\s]?[a-zA-Z]+$')]);
   matcher = new ErrorStateMatcher();
   targetHero: Hero = {
     name : '',
