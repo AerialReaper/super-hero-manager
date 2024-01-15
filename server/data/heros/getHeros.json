@@ -1,98 +1,98 @@
 {
-    "data":{
-        "heroes": [
-            {
-              "id": "0",
-              "name": "Super-man"
-            },
-            {
-              "id": "1",
-              "name": "Spiderman"
-            },
-            {
-              "id": "2",
-              "name": "Ironman"
-            },
-            {
-              "id": "3",
-              "name": "Batman"
-            },
-            {
-              "id": "4",
-              "name": "Superman"
-            },
-            {
-              "id": "5",
-              "name": "Flash"
-            },
-            {
-              "id": "6",
-              "name": "Green Lantern"
-            },
-            {
-              "id": "7",
-              "name": "Green Arrow"
-            },
-            {
-              "id": "8",
-              "name": "Wonder Woman"
-            },
-            {
-              "id": "9",
-              "name": "Martian Manhunter"
-            },
-            {
-              "id": "10",
-              "name": "Robin/Nightwing"
-            },
-            {
-              "id": "11",
-              "name": "Blue Beetle"
-            },
-            {
-              "id": "12",
-              "name": "Black Canary"
-            },
-            {
-              "id": "13",
-              "name": "Spider Man"
-            },
-            {
-              "id": "14",
-              "name": "Captain America"
-            },
-            {
-              "id": "15",
-              "name": "Iron Man"
-            },
-            {
-              "id": "16",
-              "name": "Thor"
-            },
-            {
-              "id": "17",
-              "name": "Hulk"
-            },
-            {
-              "id": "18",
-              "name": "Wolverine"
-            },
-            {
-              "id": "19",
-              "name": "Daredevil"
-            },
-            {
-              "id": "20",
-              "name": "Hawkeye"
-            },
-            {
-              "id": "21",
-              "name": "Cyclops"
-            },
-            {
-              "id": "22",
-              "name": "Silver Surfer"
-            }
-          ]          
-    }
+  "data":{
+      "heroes": [
+          {
+            "id": "0",
+            "name": "SUPER-MAN"
+          },
+          {
+            "id": "1",
+            "name": "SPIDERMAN"
+          },
+          {
+            "id": "2",
+            "name": "IRONMAN"
+          },
+          {
+            "id": "3",
+            "name": "BATMAN"
+          },
+          {
+            "id": "4",
+            "name": "SUPERMAN"
+          },
+          {
+            "id": "5",
+            "name": "FLASH"
+          },
+          {
+            "id": "6",
+            "name": "GREEN LANTERN"
+          },
+          {
+            "id": "7",
+            "name": "GREEN ARROW"
+          },
+          {
+            "id": "8",
+            "name": "WONDER WOMAN"
+          },
+          {
+            "id": "9",
+            "name": "MARTIAN MANHUNTER"
+          },
+          {
+            "id": "10",
+            "name": "ROBIN/NIGHTWING"
+          },
+          {
+            "id": "11",
+            "name": "BLUE BEETLE"
+          },
+          {
+            "id": "12",
+            "name": "BLACK CANARY"
+          },
+          {
+            "id": "13",
+            "name": "SPIDER MAN"
+          },
+          {
+            "id": "14",
+            "name": "CAPTAIN AMERICA"
+          },
+          {
+            "id": "15",
+            "name": "IRON MAN"
+          },
+          {
+            "id": "16",
+            "name": "THOR"
+          },
+          {
+            "id": "17",
+            "name": "HULK"
+          },
+          {
+            "id": "18",
+            "name": "WOLVERINE"
+          },
+          {
+            "id": "19",
+            "name": "DAREDEVIL"
+          },
+          {
+            "id": "20",
+            "name": "HAWKEYE"
+          },
+          {
+            "id": "21",
+            "name": "CYCLOPS"
+          },
+          {
+            "id": "22",
+            "name": "SILVER SURFER"
+          }
+        ]          
+  }
 }

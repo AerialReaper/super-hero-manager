@@ -25,7 +25,7 @@ server.post('/api/getHeroesByName', (req, res, next) => {
 server.post('/api/addNewHero', (req, res, next) => {
     const hero = {
         id: (idGenerator++).toString(),
-        name : req.body.heroName
+        name : req.body.heroName.toUpperCase()
     }
     heroesData.getHeroes.data.heroes.push(hero)
     setTimeout(() =>{
@@ -35,7 +35,7 @@ server.post('/api/addNewHero', (req, res, next) => {
 
 server.post('/api/modifyHero', (req, res, next) => {
     const hero = heroesData.getHeroes.data.heroes[req.body.hero.id];
-    hero.name = req.body.hero.name;
+    hero.name = req.body.hero.name.toUpperCase();
     setTimeout(() =>{
         res.status(201).send(hero);
     }, "2000");
