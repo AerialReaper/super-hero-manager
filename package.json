@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "mock:server": "nodemon server/server.js --ext js,ts,json,html"
+    "mock:server": "nodemon server/server.js --ext js,ts,json,html",
+    "compodoc": "npx compodoc -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {
