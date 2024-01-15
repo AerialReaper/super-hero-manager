@@ -17,9 +17,11 @@ export class SearchHeroComponent {
   public search: string = '';
 
   public submit(): void {
-    this.heroService.getHeroesByName(this.search).then( (res: Hero[] ) => {
-      this.sendInfoToMosaic(res);
-    });
+    if(this.search){
+      this.heroService.getHeroesByName(this.search).then( (res: Hero[] ) => {
+        this.sendInfoToMosaic(res);
+      });
+    }
   }
 
   private sendInfoToMosaic(result: Hero[]): void {

@@ -16,6 +16,8 @@ import {
   MatDialogTitle,
   MatDialogContent,
 } from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 const MaterialComponents = [
   MatGridListModule,
@@ -32,6 +34,8 @@ const MaterialComponents = [
   MatDialogClose,
   MatDialogTitle,
   MatDialogContent,
+  MatToolbarModule,
+  MatIconModule
 ]
 
 

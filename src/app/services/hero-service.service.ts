@@ -44,7 +44,6 @@ export class HeroService {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(params)
     });
-    // return await data.json() ?? [];
   }
 
   async modifyHero(hero: Hero): Promise<void> {
@@ -54,7 +53,6 @@ export class HeroService {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(params)
     });
-    // return await data.json() ?? [];
   }
 
   async deleteHero(id: string): Promise<GetHeroesResponse> {
